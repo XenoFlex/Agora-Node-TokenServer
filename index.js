@@ -4,6 +4,8 @@ const {RtcTokenBuilder, RtcRole, RtmTokenBuilder, RtmRole} = require('agora-acce
 
 dotenv.config();
 const app = express();
+var cors = require('cors');
+app.use(cors());
 const PORT = process.env.PORT || 8080;
 const APP_ID = process.env.APP_ID;
 const APP_CERTIFICATE = process.env.APP_CERTIFICATE;
