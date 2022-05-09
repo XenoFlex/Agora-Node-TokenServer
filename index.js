@@ -22,6 +22,7 @@ const ping = (req, resp) => {
 const generateRTCToken = (req, resp) => {
   // set response header
   resp.header('Access-Control-Allow-Origin', '*');
+  resp.header('Access-Control-Allow-Methods', 'GET, OPTIONS')
   // get channel name
   const channelName = req.params.channel;
   if (!channelName) {
